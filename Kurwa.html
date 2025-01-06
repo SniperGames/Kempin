@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakieta</title>
+    <link rel="stylesheet" href="kurwa.css">
+</head>
+<body>
+    <div id="hidden-content" style="display: none;">
+        <em class="PTAG pull-right"></em>
+        <em class="PTAG bottomleft"></em>
+        <em class="PTAG bottomright"></em>
+        </div>
+
+    
+    <section class="a">
+        <main>
+            <button id="play-music-btn"><img src="kempin.gif" alt="kempin"></button>
+        </main>
+        <aside>
+            <img src="a.png" alt="a">
+        </aside>
+    </section>
+    <footer><img src="frog.gif" alt="frog"></footer>
+
+    <audio id="background-audio" >
+        <source src="jk.ogg" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <script>
+		document.getElementById('play-music-btn').addEventListener('click', function() {
+			var audio = document.getElementById('background-audio');
+			var content = document.getElementById('hidden-content');
+
+            audio.play();
+			
+			// Pokazuje ukrytą zawartość strony
+			content.style.display = 'block';
+		});
+	</script>
+</body>
+</html>
