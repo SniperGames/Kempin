@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakieta</title>
+    <link rel="stylesheet" href="kurwa.css">
+</head>
+<body>
+    <div id="hidden-content" style="display: none;">
+        <em class="PTAG pull-right"></em>
+        <em class="PTAG bottomleft"></em>
+        <em class="PTAG bottomright"></em>
+    </div>
+
+    <section class="a">
+        <main>
+            <button id="jk-btn"><img src="kempin.gif" alt="kempin"></button>
+        </main>
+        <aside>
+            <button id="uwu-btn"><img src="a.png" alt="kempin"></button>
+        </aside>
+    </section>
+    <footer>
+        <button class="frog" id="frog-btn">JUMPSCARE</button>
+        <img id="frog-image" src="frog.gif" alt="frog">
+    </footer>
+
+    <audio id="jk-audio">
+        <source src="jk.ogg" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="uwu-audio">
+        <source src="uwu.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="jumpscare-audio" loop>
+        <source src="jumpscare.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        document.getElementById('jk-btn').addEventListener('click', function() {
+            var audio = document.getElementById('jk-audio');
+            var content = document.getElementById('hidden-content');
+            audio.play();
+            content.style.display = 'block';
+        });
+
+        document.getElementById('uwu-btn').addEventListener('click', function() {
+            var audio = document.getElementById('uwu-audio');
+            var content = document.getElementById('hidden-content');
+            audio.play();
+            content.style.display = 'block';
+        });
+
+        document.getElementById('frog-btn').addEventListener('click', function() {
+            var audio = document.getElementById('jumpscare-audio');
+            var image = document.getElementById('frog-image');
+            var button = document.getElementById('frog-btn');
+
+            audio.play();
+            image.style.display = 'block'; // Pokazuje obrazek
+            button.style.display = 'none'; // Ukrywa przycisk
+        });
+    </script>
+</body>
+</html>
